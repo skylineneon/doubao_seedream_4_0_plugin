@@ -1,0 +1,43 @@
+# 基础信息
+author: skyline
+# 插件配置
+name: doubao_seedream_4_0
+type: plugin
+version: 0.0.1
+tags:
+  - productivity # 标签
+created_at: '2025-09-11T10:00:00.000Z'
+description:
+  en_US: AI text-to-image generation plugin powered by Doubao Seedream 4.0
+  zh_Hans: 基于豆包Seedream 4.0的AI文生图、图生图插件
+icon: icon.svg
+label:
+  en_US: Doubao Seedream 4.0
+  zh_Hans: 豆包Seedream 4.0
+
+# 元数据配置
+meta:
+  arch: [amd64, arm64]
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+
+
+
+plugins:  
+  tools:
+    - provider/doubao_provider.yaml
+
+# 资源配置
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+
+

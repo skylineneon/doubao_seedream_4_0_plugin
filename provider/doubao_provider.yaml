@@ -1,0 +1,38 @@
+# 认证配置
+credentials_for_provider:
+  api_key:
+    help:
+      en_US: Get your Doubao API key from https://console.volcengine.com/ark/region:ark+cn-beijing/apiKey
+      zh_Hans: 从火山引擎平台获取您的APIKey。您需要创建账户并生成 API 密钥。
+    label:
+      en_US: Doubao API Key
+      zh_Hans: Doubao API Key
+    placeholder:
+      en_US: Please input your Doubao API Key
+      zh_Hans: 请输入您的Doubao API Key
+    required: true
+    type: secret-input
+    url: https://console.volcengine.com/ark/region:ark+cn-beijing/apiKey
+
+# 扩展配置
+extra:
+  python:
+    source: provider/doubao_provider.py
+
+# 工具供应商基本信息，最好跟manifest.yaml中的name一致
+identity:
+  author: skyline 
+  description: # 描述，用于前端展示“关于”中
+    en_US: AI text-to-image generation plugin powered by Doubao Seedream 4.0
+    zh_Hans: 基于豆包Seedream 4.0的AI文生图、图生图插件
+  icon: icon.svg # 图标,需要放在_assets目录下
+  label: # 标签，用于前端展示
+    en_US: Doubao Seedream 4.0
+    zh_Hans: Doubao Seedream 4.0
+  name: doubao_seedream_4_0 # 名称唯一，不可与其他供应商重名
+  tags: # 标签，用于前端展示
+  - image
+
+# 工具列表
+tools:
+  - tools/text2image.yaml

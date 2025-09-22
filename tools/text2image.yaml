@@ -1,0 +1,80 @@
+# 工具描述
+description:
+  human:
+    en_US: Generate images from text using doubao-seedream-4.0 AI model
+    zh_Hans: 使用doubao-seedream-4.0模型根据文本生成图像, # 工具的描述，用于前端展示
+  llm: This tool generates high-quality images from text descriptions using doubao-seedream-4.0 model
+
+# 扩展配置
+extra:
+  python:
+    source: tools/text2image.py
+
+# 身份信息
+identity:
+  author: skyline
+  icon: icon.svg
+  label:
+    en_US: Doubao Seedream 4.0 Text2Image
+    zh_Hans: 豆包Seedream 4.0 文生图
+  name: text2image # 工具的名称
+
+# 参数配置
+parameters:
+- form: llm
+  human_description:
+    en_US: The text prompt to generate image from. Describe what you want to see in the image.
+    zh_Hans: 用于生成图像的文本提示。描述您希望在图像中看到的内容。
+  label:
+    en_US: Image Prompt
+    zh_Hans: 图像提示词
+  llm_description: Text prompt that describes the desired image content
+  name: prompt # 参数的名称（必填），不可与工具其他参数重名
+  required: true
+  type: string # 参数的类型，可选值为 string、number、boolean、select、file、secret-input、files、model-selector、app-selector
+
+- form: form
+  type: select
+  label:
+    en_US: Image Size
+    zh_Hans: 宽高像素值
+  human_description:
+    en_US: The output image resolution in pixels (WxH). Higher values cost more and take longer.
+    zh_Hans: 指定生成图像的宽高像素值。
+  llm_description: Output image size in pixels, e.g. 2048x2048, 2560x1440.
+  name: size
+  required: false
+  options:
+  - label:
+      en_US: 2048x2048
+      zh_Hans: 2048x2048 (1:1)
+    value: "2048x2048"
+  - label:
+      en_US: 2304x1728
+      zh_Hans: 2304x1728 (4:3)
+    value: "2304x1728"
+  - label:
+      en_US: 1728x2304
+      zh_Hans: 1728x2304 (3:4)
+    value: "1728x2304"
+  - label:
+      en_US: 2560x1440
+      zh_Hans: 2560x1440 (16:9)
+    value: "2560x1440"
+  - label:
+      en_US: 1440x2560
+      zh_Hans: 1440x2560 (9:16)
+    value: "1440x2560"
+  - label:
+      en_US: 2496x1664
+      zh_Hans: 2496x1664 (3:2)
+    value: "2496x1664"
+  - label:
+      en_US: 1664x2496
+      zh_Hans: 1664x2496 (2:3)
+    value: "1664x2496"
+  - label:
+      en_US: 3024x1296
+      zh_Hans: 3024x1296 (21:9)
+    value: "3024x1296"
+  default: "2048x2048"
