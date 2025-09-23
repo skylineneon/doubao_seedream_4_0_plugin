@@ -12,7 +12,7 @@ extra:
 
 # 身份信息
 identity:
-  author: skyline
+  author: skylineneon
   icon: icon.svg
   label:
     en_US: Doubao Seedream 4.0 Text2Image

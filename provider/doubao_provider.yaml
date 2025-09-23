@@ -21,7 +21,7 @@ extra:
 
 # 工具供应商基本信息，最好跟manifest.yaml中的name一致
 identity:
-  author: skyline 
+  author: skylineneon 
   description: # 描述，用于前端展示“关于”中
     en_US: AI text-to-image generation plugin powered by Doubao Seedream 4.0
     zh_Hans: 基于豆包Seedream 4.0的AI文生图、图生图插件

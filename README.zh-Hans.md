@@ -5,23 +5,8 @@
 ## 功能特性
 
 - 使用 Doubao Seedream 4.0（`doubao-seedream-4-0-250828`）进行文生图
-- 通过 Ark 图像生成接口调用：`https://ark.cn-beijing.volces.com/api/v3/images/generations`
 - 可配置输出尺寸（如 `2048x2048`、`2560x1440`）
-- 同步生成流程，提供进度文本消息
-- 内存中转换为 PNG 并直接返回二进制
 
-## 目录结构
-
-- `main.py`：启动插件，设置较长超时时间
-- `manifest.yaml`：插件元数据与运行时定义
-- `provider/`：工具提供方定义与凭据校验
-  - `doubao_provider.yaml`：前端展示元信息与凭据表单
-  - `doubao_provider.py`：提供方实现（凭据校验）
-- `tools/`：工具实现与声明
-  - `text2image.py`：调用 Ark API 的核心文生图逻辑
-  - `text2image.yaml`：工具身份与参数定义
-- `test/`：示例/测试脚本
-- `PRIVACY.md` / `PRIVACY.zh-Hans.md`：隐私政策（英/中）
 
 ## 环境要求
 
