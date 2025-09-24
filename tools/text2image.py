@@ -1,11 +1,10 @@
-import requests
 import json
 import logging
 from collections.abc import Generator
-from PIL import Image
-from io import BytesIO
-from dify_plugin.entities.tool import ToolInvokeMessage
+
+import requests
 from dify_plugin import Tool
+from dify_plugin.entities.tool import ToolInvokeMessage
 
 # 配置日志
 logger = logging.getLogger(__name__)
@@ -146,7 +145,7 @@ class Text2ImageTool(Tool):
                 yield self.create_text_message("❌ API 响应中未返回图像数据")
                 return
             else:
-                yield self.create_text_message(f"🎉 图像生成成功，开始下载...\n")
+                yield self.create_text_message("🎉 图像生成成功，开始下载...\n")
             for i, data in enumerate(data_list):
                 yield self.create_text_message(f"开始下载第{i + 1}张图片:")
                 image_url = data.get("url", "")
