@@ -183,6 +183,7 @@ class Text2ImageTool(Tool):
                     yield self.create_text_message(f"📊 使用信息: {usage_text}")
 
             logger.info("豆包文生图任务完成")
+            
 
         except Exception as e:
             error_msg = f"生成图像时出现未预期错误: {str(e)}"

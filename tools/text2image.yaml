@@ -16,7 +16,7 @@ identity:
   icon: icon.svg
   label:
     en_US: Doubao Seedream 4.0 Text2Image
-    zh_Hans: 豆包Seedream 4.0 文生图
+    zh_Hans: 豆包Seedream 4.0 文生图 # 插件市场及工作流展示的工具名称
   name: text2image # 工具的名称
 
 # 参数配置
@@ -24,10 +24,10 @@ parameters:
 - form: llm
   human_description:
     en_US: The text prompt to generate image from. Describe what you want to see in the image.
-    zh_Hans: 用于生成图像的文本提示。描述您希望在图像中看到的内容。
+    zh_Hans: 用于生成图像的文本提示。描述您希望在图像中看到的内容。 # 插件市场展示的参数描述
   label:
     en_US: Image Prompt
-    zh_Hans: 图像提示词
+    zh_Hans: 图像提示词 # 插件市场展示的参数名称
   llm_description: Text prompt that describes the desired image content
   name: prompt # 参数的名称（必填），不可与工具其他参数重名
   required: true
